@@ -16,12 +16,14 @@ int main()
     return 0;
 }
   
+  
 Const Keyword With Pointer Variables:
  Pointers can be declared with a const keyword. So, there are three possible ways to use a const keyword with a pointer, which are as follows:
 When the pointer variable point to a const value:
 Example:
 >#include <iostream>
 using namespace std;
+  
 int main()
 {
     int x{ 10 };
@@ -39,6 +41,7 @@ int main()
     // *j = 7;
     cout << *i << " " << *j;
 }
+  
 When the const pointer variable point to the value:
 Example:
 >#include <iostream>
