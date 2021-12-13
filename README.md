@@ -1,12 +1,15 @@
 # Tast3.io
-                                                                    "constant"
+
+                                                                   "constant"
+                                                                   
 Constant Variables:
 
 There are a certain set of rules for the declaration and initialization of the constant variables:
 The const variable cannot be left un-initialized at the time of the assignment.
 It cannot be assigned value anywhere in the program.
 Explicit value needed to be provided to the constant variable at the time of declaration of the constant variable.
-Example::
+
+Example:
 
 >#include <iostream>
 using namespace std;
@@ -24,7 +27,7 @@ Const Keyword With Pointer Variables:
  Pointers can be declared with a const keyword. So, there are three possible ways to use a const keyword with a pointer, which are as follows:
 When the pointer variable point to a const value:
   
-Example::
+Example:
   
 >#include <iostream>
 using namespace std; 
@@ -47,7 +50,9 @@ int main()
 }
   
 When the const pointer variable point to the value:
+  
 Example:
+  
 >#include <iostream>
 using namespace std;
 int main()
@@ -80,8 +85,11 @@ int main()
     cout << i << " and " << j;
     return 0;
 }
+  
 When const pointer pointing to a const variable:
+  
 Example:
+  
 >#include <iostream>
 using namespace std;
 int main()
@@ -103,8 +111,11 @@ int main()
     cout << *i << " and " << *j;
     return 0;
 }
+  
 Pass const-argument value to a non-const parameter of a function cause error: Passing const argument value to a non-const parameter of a function isn’t valid it gives you a compile-time error.
+  
 Example:
+  
 >#include <iostream>
 using namespace std;
 int foo(int* y)
@@ -118,24 +129,33 @@ int main()
     cout << foo(x);
     return 0;
 }
+  
                                                               Constant Methods:
+  
 When a function is declared as const, it can be called on any type of object, const object as well as non-const objects.
 Whenever an object is declared as const, it needs to be initialized at the time of declaration. However, the object initialization while declaring is possible only with the help of constructors.
+  
 There are two ways of a constant function declaration:
+  
 Ordinary const-function Declaration:
+  
 >const void foo(){
    //void foo() const Not valid
 }                  
 int main(){
    foo(x);
 }  
->A const member function of the class:
-class{
+  
+A const member function of the class:
+  
+>class{
    void foo() const {
        //.....
    }
 }
+  
 Example:
+  
 >#include <iostream>
 using namespace std;
  class Test {
@@ -172,9 +192,13 @@ int main(){
     cout << t.getValue() << endl:
     return 0;
 }
+  
 Constant Function Parameters And Return Type:
+  
 A function() parameters and return type of function() can be declared as constant. Constant values cannot be changed as any such attempt will generate a compile-time error.
+  
 Example:
+  
 >#include <iostream>
 using namespace std;
 void foo(const int y)
@@ -198,8 +222,13 @@ int main()
     foo1(x);
     return 0;
 }
-For const return type: The return type of the function() is const and so it returns a const integer value to us.
+  
+For const return type: 
+  
+The return type of the function() is const and so it returns a const integer value to us.
+  
 Example:
+  
 >#include <iostream>
 using namespace std;
 const int foo(int y)
@@ -215,8 +244,13 @@ int main()
          << foo(z);
     return 0;
 }
-For const return type and const parameter: Here, both return type and parameter of the function are of const types.
+  
+For const return type and const parameter:
+  
+Here, both return type and parameter of the function are of const types.
+  
 Exapmle:
+  
 >#include <iostream>
 using namespace std;
 const int foo(const int y)
@@ -234,14 +268,20 @@ int main()
          << foo(z);
     return 0;
 }
-                                                                                " &"
+  
+                                                                               " &"
+  
 The unary address-of operator (&) returns the address of (that is, a pointer to) its operand. The operand of the address-of operator can be a function designator. Or, it can be an lvalue that refers to an object that's not a bit field.
 
 The address-of operator can only be applied to certain lvalue expressions: either to variables of fundamental, structure, class, or union types, or to subscripted array references. In these expressions, a constant expression (one that doesn't include the address-of operator) can be added to or subtracted from the address-of expression.
 
 When applied to functions or lvalues, the result of the expression is a pointer type (an rvalue) derived from the type of the operand. For example, if the operand is of type char, the result of the expression is of type pointer to char. The address-of operator, applied to const or volatile objects, evaluates to const type * or volatile type *, where type is the type of the original object.
-Example: Address of a reference type
-Applying the address-of operator to a reference type gives the same result as applying the operator to the object to which the reference is bound. For example:
+  
+Example:
+  
+Address of a reference type
+Applying the address-of operator to a reference type gives the same result as applying the operator to the object to which the reference is bound. 
+  
 >#include <iostream>
 using namespace std;
 int main() {
@@ -252,8 +292,12 @@ int main() {
    if( &d == &rd )
       cout << "&d equals &rd" << endl;
 }
-Example: Function address as parameter
+  
+Example:
+  
+Function address as parameter
 The following example uses the address-of operator to pass a pointer argument to a function:
+  
 >#include <iostream>
 using namespace std;
 // Function argument is pointer to type int
