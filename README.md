@@ -264,6 +264,7 @@ int main()
          << foo(z);
     return 0;
 }
+```
   
 For const return type and const parameter:
   
@@ -306,7 +307,7 @@ Address of a reference type
 Applying the address-of operator to a reference type gives the same result as applying the operator to the object to which the reference is bound. 
   
 ```
-#include <iostream>
+ #include <iostream>
 using namespace std;
 int main() {
    double d;        // Define an object of type double.
