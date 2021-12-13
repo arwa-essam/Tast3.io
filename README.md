@@ -121,7 +121,7 @@ int main()
 }
 ```
 
-Pass const-argument value to a non-const parameter of a function cause error: Passing const argument value to a non-const parameter of a function isn’t valid it gives you a compile-time error.
+Pass const-argument value to a non-const parameter of a function cause error:
   
 Example:
   
