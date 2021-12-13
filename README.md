@@ -1,6 +1,8 @@
 # Tast3.io
 
-                                                                "constant"
+ Various uses of  "const" and "&"  keywords which are found in C++ will be discussed.
+
+                                                             "constant"
                                                                    
 Constant Variables:
 
@@ -29,8 +31,9 @@ Const Keyword With Pointer Variables:
 When the pointer variable point to a const value:
   
 Example:
-  
->#include <iostream>
+ 
+```
+#include <iostream>
 using namespace std; 
 int main()
 {
@@ -49,12 +52,14 @@ int main()
     // *j = 7;
     cout << *i << " " << *j;
 }
-  
+ ```
+ 
 When the const pointer variable point to the value:
   
 Example:
-  
->#include <iostream>
+
+```
+#include <iostream>
 using namespace std;
 int main()
 {
@@ -86,12 +91,14 @@ int main()
     cout << i << " and " << j;
     return 0;
 }
+```
   
 When const pointer pointing to a const variable:
   
 Example:
-  
->#include <iostream>
+
+``` 
+#include <iostream>
 using namespace std;
 int main()
 {
@@ -112,12 +119,14 @@ int main()
     cout << *i << " and " << *j;
     return 0;
 }
-  
+```
+
 Pass const-argument value to a non-const parameter of a function cause error: Passing const argument value to a non-const parameter of a function isn’t valid it gives you a compile-time error.
   
 Example:
   
->#include <iostream>
+```
+#include <iostream>
 using namespace std;
 int foo(int* y)
 {
@@ -130,6 +139,7 @@ int main()
     cout << foo(x);
     return 0;
 }
+```
 
 Constant Methods:
   
@@ -140,24 +150,29 @@ There are two ways of a constant function declaration:
   
 Ordinary const-function Declaration:
   
->const void foo(){
+```
+const void foo(){
    //void foo() const Not valid
 }                  
 int main(){
    foo(x);
-}  
+}
+```
   
 A const member function of the class:
   
->class{
+```
+class{
    void foo() const {
        //.....
    }
 }
+```
   
 Example:
   
->#include <iostream>
+```
+#include <iostream>
 using namespace std;
  class Test {
     int value;
@@ -193,6 +208,7 @@ int main(){
     cout << t.getValue() << endl:
     return 0;
 }
+```
   
 Constant Function Parameters And Return Type:
   
@@ -200,7 +216,8 @@ A function() parameters and return type of function() can be declared as constan
   
 Example:
   
->#include <iostream>
+```
+#include <iostream>
 using namespace std;
 void foo(const int y)
 {
@@ -223,6 +240,7 @@ int main()
     foo1(x);
     return 0;
 }
+```
   
 For const return type: 
   
@@ -230,7 +248,8 @@ The return type of the function() is const and so it returns a const integer val
   
 Example:
   
->#include <iostream>
+```
+#include <iostream>
 using namespace std;
 const int foo(int y)
 {
@@ -251,8 +270,9 @@ For const return type and const parameter:
 Here, both return type and parameter of the function are of const types.
   
 Exapmle:
-  
->#include <iostream>
+
+```
+#include <iostream>
 using namespace std;
 const int foo(const int y)
 {
@@ -269,6 +289,7 @@ int main()
          << foo(z);
     return 0;
 }
+```
   
                                                              " &"
   
@@ -283,7 +304,8 @@ Example:
 Address of a reference type
 Applying the address-of operator to a reference type gives the same result as applying the operator to the object to which the reference is bound. 
   
->#include <iostream>
+```
+#include <iostream>
 using namespace std;
 int main() {
    double d;        // Define an object of type double.
@@ -293,13 +315,15 @@ int main() {
    if( &d == &rd )
       cout << "&d equals &rd" << endl;
 }
+```
   
 Example:
   
 Function address as parameter
 The following example uses the address-of operator to pass a pointer argument to a function:
   
->#include <iostream>
+```
+#include <iostream>
 using namespace std;
 // Function argument is pointer to type int
 int square( int *n ) {
@@ -309,6 +333,7 @@ int main() {
    int mynum = 5;
    cout << square( &mynum ) << endl;   // pass address of int
 }
+```
 
 
 
