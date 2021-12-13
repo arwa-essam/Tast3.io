@@ -1,6 +1,6 @@
 # Tast3.io
 
-                                                                   "constant"
+                                                                "constant"
                                                                    
 Constant Variables:
 
@@ -129,8 +129,8 @@ int main()
     cout << foo(x);
     return 0;
 }
-  
-                                                              Constant Methods:
+
+Constant Methods:
   
 When a function is declared as const, it can be called on any type of object, const object as well as non-const objects.
 Whenever an object is declared as const, it needs to be initialized at the time of declaration. However, the object initialization while declaring is possible only with the help of constructors.
