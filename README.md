@@ -1,6 +1,6 @@
 # Tast3.io
 
- Various uses of  "const" and "&"  keywords which are found in C++ will be discussed.
+ Various uses of  "const" Keyword and "&" operator which are found in C++ will be discussed.
 
                                                              "constant"
                                                                    
