@@ -1,10 +1,13 @@
 # Tast3.io
                                                                     "constant"
 Constant Variables:
+
 There are a certain set of rules for the declaration and initialization of the constant variables:
 The const variable cannot be left un-initialized at the time of the assignment.
 It cannot be assigned value anywhere in the program.
 Explicit value needed to be provided to the constant variable at the time of declaration of the constant variable.
+Example::
+
 >#include <iostream>
 using namespace std;
 int main()
@@ -20,10 +23,11 @@ int main()
 Const Keyword With Pointer Variables:
  Pointers can be declared with a const keyword. So, there are three possible ways to use a const keyword with a pointer, which are as follows:
 When the pointer variable point to a const value:
-Example:
->#include <iostream>
-using namespace std;
   
+Example::
+  
+>#include <iostream>
+using namespace std; 
 int main()
 {
     int x{ 10 };
